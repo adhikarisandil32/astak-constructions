@@ -8,24 +8,37 @@ export default function FooterSection() {
     <div className="bg-gray-900 text-white">
       <div className="container">
         <div className="py-16 flex justify-between">
-          <div>
-            <div>Logo</div>
+          <div className="flex gap-2 items-center">
             <div>
-              <p>Copyright © 2024. All Rights Reserved.</p>
+              <a href="#" className="block relative h-24 w-24">
+                <img
+                  src="/assets/logo.png"
+                  alt="logo"
+                  className="absolute h-full w-full object-contain object-center"
+                />
+              </a>
             </div>
-            <div>
-              <p>
-                Developed by{" "}
-                <a href="https://sandil-adhikari.vercel.app/" target="_blank" className="group text-blue-400">
-                  <span className="inline-block relative">
-                    <span>
-                      Sandil Adhikari <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </span>
 
-                    <span className="absolute left-0 inline-block h-full w-0 group-hover:w-full transition-all duration-300 border-b-2 border-blue-400"></span>
-                  </span>
-                </a>
-              </p>
+            <div>
+              <div>
+                <p>Copyright © 2024</p>
+                <p>All Rights Reserved</p>
+              </div>
+
+              <div>
+                <p>
+                  Developed by{" "}
+                  <a href="https://sandil-adhikari.vercel.app/" target="_blank" className="group text-blue-400">
+                    <span className="inline-block relative">
+                      <span>
+                        Sandil Adhikari <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      </span>
+
+                      <span className="absolute left-0 inline-block h-full w-0 group-hover:w-full transition-all duration-300 border-b-2 border-blue-400"></span>
+                    </span>
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 

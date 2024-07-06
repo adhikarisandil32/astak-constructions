@@ -14,9 +14,11 @@ export default function Navbar() {
   return (
     <div className="bg-blue-950 sticky top-0 z-50">
       <div className="container">
-        <div className="py-6 flex items-center justify-between">
-          <div className="text-2xl text-white">
-            <a href="#">Logo</a>
+        <div className="py-2 flex items-center justify-between">
+          <div>
+            <a href="#" className="block relative h-24 w-24">
+              <img src="/assets/logo.png" alt="logo" className="absolute h-full w-full object-contain object-center" />
+            </a>
           </div>
 
           <div>

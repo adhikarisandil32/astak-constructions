@@ -47,14 +47,15 @@ export default function Modal({ setShowModal, imagesUrl }) {
     >
       <div className="absolute -z-10 h-full w-full" onClick={() => setShowModal(false)}></div>
 
-      <div className="p-4 h-full w-full md:w-[90%] space-y-4 rounded-lg bg-black/90">
+      <div className="p-4 flex flex-col h-full w-full md:w-[90%] space-y-4 rounded-lg bg-black/90">
+        {/* Cross Button */}
         <div className="text-right">
           <button onClick={() => setShowModal(false)}>
             <FontAwesomeIcon icon={faCircleXmark} className="text-3xl" />
           </button>
         </div>
 
-        <div className="flex justify-center w-3/4 mx-auto items-center gap-4">
+        <div className="flex flex-auto justify-center w-3/4 mx-auto items-center gap-4">
           <div>
             <button ref={prevButtonRef} onClick={slidePrev}>
               <FontAwesomeIcon icon={faSquareCaretLeft} className="text-6xl cursor-pointer" />
@@ -64,7 +65,7 @@ export default function Modal({ setShowModal, imagesUrl }) {
           <swiper-container class="w-full" loop="true" ref={swiperRef}>
             {imagesUrl?.map((imageUrl, idx) => (
               <swiper-slide key={idx}>
-                <div className="relative md:h-[600px]">
+                <div className="relative h-[600px]">
                   <img
                     src={imageUrl}
                     alt="project-image"
