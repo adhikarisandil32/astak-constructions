@@ -7,3 +7,12 @@
     background-image: radial-gradient(circle, #ffffcc, rgb(249, 250, 251));
   }
 }
+
+@layer utilities {
+  .grid-rows-0 {
+    grid-template-rows: 0fr;
+  }
+  .grid-rows-1fr {
+    grid-template-rows: 1fr;
+  }
+}
