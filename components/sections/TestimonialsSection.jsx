@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
               />
             </div>
 
-            <swiper-container loop="true" class="xl:w-[85%] w-[80%]" ref={swiperRef}>
+            <swiper-container loop="true" autoplay-delay="5000" class="xl:w-[85%] w-[80%]" ref={swiperRef}>
               {testimonials.map((testimonial, idx) => (
                 <swiper-slide key={idx}>
                   <div className="flex flex-col xl:flex-row items-center xl:gap-8">
