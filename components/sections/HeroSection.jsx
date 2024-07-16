@@ -4,7 +4,7 @@ import ButtonSecondary from "../buttons/ButtonSecondary"
 
 export default function HeroSection() {
   return (
-    <div className="md:h-[90vh] bg-orange-200">
+    <div className="xl:h-[90vh] bg-orange-200">
       <div className="container h-full">
         <div className="h-full flex items-center">
           <div className="w-1/2 space-y-6">
