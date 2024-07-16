@@ -17,10 +17,10 @@ export default function ServicesCard({ service }) {
 
         <ul className="space-y-2 list-disc ml-8">
           <li>
-            <p>{service.description.overview}</p>
+            <p className="text-sm xl:text-base">{service.description.overview}</p>
           </li>
           <li>
-            <p>{service.description.responsibility}</p>
+            <p className="text-sm xl:text-base">{service.description.responsibility}</p>
           </li>
         </ul>
       </div>

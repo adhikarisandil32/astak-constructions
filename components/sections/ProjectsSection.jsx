@@ -27,13 +27,13 @@ export default function ProjectsSection() {
           </div>
 
           <div>
-            <p className="mx-auto w-[min(600px,100%)] font-semibold text-center text-xl">
+            <p className="mx-auto w-[min(600px,100%)] font-semibold text-center xl:text-xl text-lg">
               Explore our latest projects, showcasing our dedication to quality and innovation. Each project highlights
               our commitment to excellence and client satisfaction.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid xl:grid-cols-3 grid-cols-1 gap-8">
             {Array.from({ length: 9 }, (_, idx) => (
               <ProjectCard key={idx} project={projects[0]} />
             ))}

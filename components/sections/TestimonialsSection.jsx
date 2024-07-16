@@ -1,7 +1,7 @@
 import { faCaretLeft, faCaretRight, faQuoteLeft, faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons"
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import React, { useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import { register } from "swiper/element/bundle"
 
 register()
@@ -57,6 +57,10 @@ export default function TestimonialsSection() {
   const swiperPrev = () => swiperRef.current.swiper.slidePrev()
   const swiperNext = () => swiperRef.current.swiper.slideNext()
 
+  useEffect(() => {
+    swiperRef.current.swiper.autoplay.pause()
+  })
+
   return (
     <div id="testimonials" className="bg-orange-200">
       <div className="container">
@@ -66,14 +70,14 @@ export default function TestimonialsSection() {
           </div>
 
           <div>
-            <p className="w-[400px] mx-auto font-semibold text-center text-xl">
+            <p className="w-[min(400px,100%)] mx-auto font-semibold text-center xl:text-xl text-lg">
               Don't just take our word for it. <br />
               See what clients' have to say about us.
             </p>
           </div>
 
-          <div className="w-[min(100%,700px)] mx-auto md:flex md:gap-4 md:items-center">
-            <div className="hidden md:block">
+          <div className="w-[min(100%,600px)] mx-auto flex items-center">
+            <div className="">
               <FontAwesomeIcon
                 icon={faCaretLeft}
                 onClick={swiperPrev}
@@ -81,11 +85,11 @@ export default function TestimonialsSection() {
               />
             </div>
 
-            <swiper-container loop="true" autoplay-delay="5000" class="w-[min(100%,600px)]" ref={swiperRef}>
+            <swiper-container loop="true" class="xl:w-[85%] w-[80%]" ref={swiperRef}>
               {testimonials.map((testimonial, idx) => (
                 <swiper-slide key={idx}>
-                  <div className="flex items-center gap-8">
-                    <div className="relative h-[125px] w-[300px] rounded-full overflow-hidden">
+                  <div className="flex flex-col xl:flex-row items-center xl:gap-8">
+                    <div className="relative h-[125px] xl:w-[350px] w-[125px] rounded-full overflow-hidden">
                       <img
                         src={testimonial.profileImgUrl}
                         alt="testimonial-user-pic"
@@ -94,13 +98,13 @@ export default function TestimonialsSection() {
                     </div>
 
                     <div className="space-y-2">
-                      <div>
-                        <FontAwesomeIcon icon={faQuoteLeft} className="pr-2 text-5xl text-gray-700" />
-                        <span className="font-semibold text-lg">{testimonial.message}</span>
+                      <div className="text-justify xl:text-left text-last-center xl:text-last-left">
+                        <FontAwesomeIcon icon={faQuoteLeft} className="pr-2 xl:text-5xl text-3xl text-gray-700" />
+                        <span className="font-semibold xl:text-lg text-base">{testimonial.message}</span>
                       </div>
 
                       <div>
-                        <p>
+                        <p className="text-center xl:text-left">
                           {Array.from({ length: testimonial.rating }, (_, idx) => (
                             <FontAwesomeIcon key={idx} icon={faStarSolid} className="text-orange-600" />
                           ))}
@@ -110,7 +114,7 @@ export default function TestimonialsSection() {
                           ))}
                         </p>
 
-                        <p>{testimonial.name}</p>
+                        <p className="text-center xl:text-left">{testimonial.name}</p>
                       </div>
                     </div>
                   </div>
@@ -118,7 +122,7 @@ export default function TestimonialsSection() {
               ))}
             </swiper-container>
 
-            <div className="hidden md:block">
+            <div className="">
               <FontAwesomeIcon
                 icon={faCaretRight}
                 onClick={swiperNext}

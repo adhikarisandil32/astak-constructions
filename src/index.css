@@ -15,4 +15,10 @@
   .grid-rows-1fr {
     grid-template-rows: 1fr;
   }
+  .text-last-center {
+    text-align-last: center;
+  }
+  .text-last-center {
+    text-align-last: left;
+  }
 }

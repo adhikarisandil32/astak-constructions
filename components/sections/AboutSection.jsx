@@ -49,8 +49,8 @@ export default function AboutSection() {
             <span className="tracking-widest text-sm">ABOUT US</span>
           </div>
 
-          <div className="flex gap-8">
-            <div className="w-1/2 space-y-4">
+          <div className="flex xl:flex-row flex-col-reverse gap-8">
+            <div className="xl:w-1/2 space-y-4">
               <p className="font-bold text-xl">WHO ARE WE ?</p>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa distinctio commodi sit possimus
@@ -69,10 +69,10 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="w-1/2 space-y-4">
+            <div className="xl:w-1/2 space-y-4">
               <p className="font-bold text-xl">OUR TEAM</p>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid xl:grid-cols-2 grid-cols-1 gap-4">
                 {members.map((member, idx) => (
                   <MemberCard key={idx} member={member} />
                 ))}

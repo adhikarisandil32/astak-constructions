@@ -4,7 +4,7 @@ export default function Banner() {
   return (
     <div className="bg-blue-950 text-white">
       <div className="container">
-        <div className="py-16 flex justify-between items-center">
+        <div className="py-16 grid xl:grid-cols-4 grid-cols-2 gap-y-8 xl:justify-between xl:items-center">
           <div className="text-center space-y-2">
             <p>
               <span className="text-4xl font-bold">5+</span>

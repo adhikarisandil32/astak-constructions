@@ -7,7 +7,7 @@ export default function FooterSection() {
   return (
     <div className="bg-gray-900 text-white">
       <div className="container">
-        <div className="py-16 flex justify-between">
+        <div className="py-16 flex flex-wrap justify-between gap-4">
           <div className="flex gap-2 items-center">
             <div>
               <a href="#" className="block relative h-24 w-24">

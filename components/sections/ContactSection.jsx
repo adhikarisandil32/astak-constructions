@@ -51,14 +51,14 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <p className="w-[400px] mx-auto font-semibold text-center text-lg">
+            <p className="w-[min(100%,400px)] mx-auto font-semibold text-center text-lg">
               Contact Us For a Quote or to Discuss a Project
             </p>
           </div>
 
           <div>
-            <div className="p-2 w-[min(600px,100%)] mx-auto flex justify-between">
-              <div className="p-4 w-1/3 text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
+            <div className="p-2 w-[min(600px,100%)] mx-auto flex flex-wrap gap-2 justify-between">
+              <div className="p-4 xl:w-1/3 text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
                 <p>
                   <FontAwesomeIcon icon={faLocationDot} className="text-blue-950 text-2xl" />
                 </p>
@@ -70,7 +70,7 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <div className="p-4 w-1/3 text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
+              <div className="p-4 xl:w-1/3 text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
                 <p>
                   <FontAwesomeIcon icon={faPhone} className="text-blue-950 text-2xl" />
                 </p>
@@ -82,7 +82,7 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <div className="p-4 w-1/3 text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
+              <div className="p-4 xl:w-1/3 mx-auto text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
                 <p>
                   <FontAwesomeIcon icon={faEnvelope} className="text-blue-950 text-2xl" />
                 </p>

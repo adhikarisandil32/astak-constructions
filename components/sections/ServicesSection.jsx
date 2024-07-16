@@ -85,12 +85,12 @@ export default function ServicesSection() {
             <span className="tracking-widest text-sm">SERVICES WE OFFER</span>
           </div>
 
-          <div className="w-[600px] font-semibold mx-auto text-center text-lg">
+          <div className="w-[min(600px,100%)] font-semibold mx-auto text-center xl:text-xl text-lg">
             We provide a comprehensive selection of expertly designed construction services to meet various project
             requirements and client goals. Some of our key services include:
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid xl:grid-cols-3 grid-cols-1 gap-8">
             {services.map((service, idx) => (
               <ServicesCard service={service} key={idx} />
             ))}
