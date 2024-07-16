@@ -57,7 +57,7 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <div className="p-2 w-[min(600px,100%)] mx-auto flex flex-wrap gap-2 justify-between">
+            <div className="p-2 w-[min(600px,100%)] mx-auto flex xl:flex-nowrap flex-wrap gap-2 justify-between">
               <div className="p-4 xl:w-1/3 text-center space-y-2 break-words hover:bg-blue-300 transition-all duration-300 rounded-md cursor-pointer">
                 <p>
                   <FontAwesomeIcon icon={faLocationDot} className="text-blue-950 text-2xl" />
