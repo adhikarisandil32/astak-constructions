@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import Menu from "../Menu"
 import ButtonHamBurger from "../buttons/ButtonHamBurger"
 
@@ -13,6 +13,7 @@ const menuItems = [
 
 export default function Navbar() {
   const menuRef = useRef()
+  const navbarRef = useRef()
 
   const clickAction = () => {
     const menuClassLists = menuRef.current.classList
@@ -26,8 +27,12 @@ export default function Navbar() {
     }
   }
 
+  useEffect(() => {
+    console.log(navbarRef.current.clientHeight)
+  }, [])
+
   return (
-    <div className="bg-red-950 sticky top-0 z-50">
+    <div className="bg-red-950 sticky top-0 z-50" ref={navbarRef}>
       <div className="container">
         <div className="py-2 flex xl:flex-row flex-col xl:items-center justify-between">
           <div className="relative">
